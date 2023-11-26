@@ -1,23 +1,86 @@
+/* styles/Header.module.css */
+.container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+
+
+.navbar {
+  padding: 10px 0;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink  {
+  color: white;
+  text-decoration: none;
+  padding: 0 6px; /* Adjust the padding as needed */
+}
+.navItem a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Remove underlines for visited links */
+.navItem a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/* Remove underlines for active links */
+.navItem a:active {
+  color: white;
+  text-decoration: none;
+}
+
+/* Remove underlines for links on hover */
+.navItem a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* Add more styles as needed */
 .main {
 	display: grid;
 	place-items: center;
 	height: 100%;
-	background: linear-gradient(
-			to bottom,
-			var(--color-bg),
-			transparent,
-			var(--color-bg)
-		),
-		radial-gradient(circle, transparent 0%, var(--color-bg) 70%);
+
 }
 
 .wrapper {
 	position: relative;
-	border: 1px solid var(--color-primary);
-	border-radius: var(--rounded-md);
-	background: hsl(var(--h), 1%, 10%);
 	max-width: clamp(20rem, 90%, 40rem);
-	box-shadow: var(--shadow-lg);
 }
 
 .wrapper::after {
@@ -35,9 +98,10 @@
 	animation: animateGlow 5s linear infinite;
 }
 
-.content {
-	margin-top: 1.5rem;
-}
+
+
+
+
 
 .footer {
 	display: flex;
@@ -75,7 +139,6 @@
 }
 
 .wrapper li {
-	color: var(--color-grey-400);
 	line-height: 1.75;
 }
 
@@ -147,16 +210,30 @@ span.button:hover {
 	color: var(--color-grey-100);
 }
 
+.logoContainer {
+  display: flex;
+  align-items: center;
+    padding-right: 10rem;
+  }
 
-.backdrop {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 4;
-	transition: opacity 0.2s;
-}
+.buttons {
+  display: flex;
+  align-items: center;
+    gap: 0.5rem;
+  }
+
+
+.rightButtons {
+  display: flex;
+  justify-content: flex-end;
+    margin-left: auto; /* Pushes the rightButtons to the right */
+  }
+
+
+  .content {
+  	margin-top: 1.5rem;
+  }
+
 
 @keyframes animateGlow {
 	0% {

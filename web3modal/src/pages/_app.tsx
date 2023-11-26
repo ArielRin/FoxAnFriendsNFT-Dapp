@@ -1,7 +1,6 @@
 import "@/styles/globals.css";
 import { createWeb3Modal, defaultWagmiConfig } from "@web3modal/wagmi/react";
-
-import { WagmiConfig } from "wagmi";
+import { WagmiConfig, useContractRead } from "wagmi";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import {
@@ -16,14 +15,7 @@ import {
 } from "wagmi/chains";
 
 const chains = [
-	mainnet,
-	polygon,
-	avalanche,
-	arbitrum,
-	bsc,
-	optimism,
-	gnosis,
-	fantom,
+	bsc
 ];
 
 // 1. Get projectID at https://cloud.walletconnect.com
