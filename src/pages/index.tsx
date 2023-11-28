@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import MyABI from "@/components/contractABI";
+import MyABI from "@/components/contractABI.js";
 
 import Head from "next/head";
 import Link from "next/link";
