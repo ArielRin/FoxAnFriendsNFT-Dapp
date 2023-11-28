@@ -6,26 +6,17 @@ import Link from "next/link";
 import styles from "@/styles/Header.module.css"; // Adjust the path based on your project structure
 
 interface HeaderProps {
-  isConnectHighlighted: boolean;
-  isNetworkSwitchHighlighted: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ isConnectHighlighted, isNetworkSwitchHighlighted }) => {
-  const [networkSwitchHighlighted, setNetworkSwitchHighlighted] = useState<boolean>(false);
-  const [connectHighlighted, setConnectHighlighted] = useState<boolean>(false);
+const Header: React.FC<HeaderProps> = () => {
 
   const closeAll = () => {
-    setNetworkSwitchHighlighted(false);
-    setConnectHighlighted(false);
   };
 
   return (
     <header className={styles.header}>
       <div
         className={styles.backdrop}
-        style={{
-          opacity: connectHighlighted || networkSwitchHighlighted ? 1 : 0,
-        }}
       />
       <Link href="/" passHref> {/* Wrap the logo container with Link */}
               <div className={styles.logoContainer} onClick={closeAll}>

@@ -7,12 +7,8 @@ import { useState } from "react";
 
 
 export default function About() {
-  const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] = useState(false);
-  const [isConnectHighlighted, setIsConnectHighlighted] = useState(false);
 
   const closeAll = () => {
-    setIsNetworkSwitchHighlighted(false);
-    setIsConnectHighlighted(false);
   };
 
 

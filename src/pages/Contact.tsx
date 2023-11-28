@@ -7,12 +7,8 @@ import mainPagesStyles from "@/styles/MainPages.module.css";
 import { useState } from "react";
 
 export default function Contact() {
-  const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] = useState(false);
-  const [isConnectHighlighted, setIsConnectHighlighted] = useState(false);
 
   const closeAll = () => {
-    setIsNetworkSwitchHighlighted(false);
-    setIsConnectHighlighted(false);
   };
 
 

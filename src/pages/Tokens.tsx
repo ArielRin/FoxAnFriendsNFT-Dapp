@@ -6,12 +6,8 @@ import { useState } from "react";
 import mainPagesStyles from "@/styles/MainPages.module.css";
 
 export default function Home() {
- const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] = useState(false);
- const [isConnectHighlighted, setIsConnectHighlighted] = useState(false);
 
  const closeAll = () => {
-		setIsNetworkSwitchHighlighted(false);
-		setIsConnectHighlighted(false);
 	};
 	return (
 		<>
@@ -28,8 +24,6 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header
-		isConnectHighlighted={isConnectHighlighted}
-		isNetworkSwitchHighlighted={isNetworkSwitchHighlighted}
 
 	/>
 

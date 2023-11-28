@@ -11,7 +11,7 @@
 # next.js
 /.next/
 /out/
-
+/node_nodules
 # production
 /build
 
@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+web3modal/.next/cache/webpack/client-development/0.pack.gz
+web3modal/.next/cache/webpack/client-development/index.pack.gz
+web3modal/.next/cache/webpack/server-development/0.pack.gz
+web3modal/.next/cache/webpack/server-development/index.pack.gz

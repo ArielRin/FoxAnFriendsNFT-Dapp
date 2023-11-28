@@ -9,12 +9,8 @@ import mainPagesStyles from "@/styles/MainPages.module.css";
 import { useContractRead } from 'wagmi'
 
 export default function Home() {
-  const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] = useState(false);
-  const [isConnectHighlighted, setIsConnectHighlighted] = useState(false);
 
   const closeAll = () => {
-    setIsNetworkSwitchHighlighted(false);
-    setIsConnectHighlighted(false);
   };
 
 
@@ -26,13 +22,13 @@ function App() {
   })
 }
 
-function App() {
- const { data, isLoading, isSuccess, write } = useContractWrite({
-	 address: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-	 abi: MyABI,
-	 functionName: 'claim',
- })
-}
+// function App() {
+//  const { data, isLoading, isSuccess, write } = useContractWrite({
+// 	 address: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
+// 	 abi: MyABI,
+// 	 functionName: 'claim',
+//  })
+// }
 
   return (
     <>
@@ -44,8 +40,6 @@ function App() {
       </Head>
 
       <Header
-        isConnectHighlighted={isConnectHighlighted}
-        isNetworkSwitchHighlighted={isNetworkSwitchHighlighted}
       />
 
       <main className={`${styles.main} ${mainPagesStyles.mainPages}`}>
