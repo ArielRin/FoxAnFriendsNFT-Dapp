@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import contractABI from "@/components/contractABI";
+import ContractABI from "@/components/ContractABI";
 
 import Head from "next/head";
 import Link from "next/link";
@@ -17,7 +17,7 @@ export default function Home() {
 function App() {
   const { data, isError, isLoading } = useContractRead({
     address: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
- 	 abi: contractABI,
+ 	 abi: ContractABI,
     functionName: 'namw',
   })
 }
@@ -25,7 +25,7 @@ function App() {
 // function App() {
 //  const { data, isLoading, isSuccess, write } = useContractWrite({
 // 	 address: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-// 	 abi: contractABI,
+// 	 abi: ContractABI,
 // 	 functionName: 'claim',
 //  })
 // }
