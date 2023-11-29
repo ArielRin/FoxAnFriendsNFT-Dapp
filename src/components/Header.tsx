@@ -21,13 +21,13 @@ const Header: React.FC<HeaderProps> = () => {
       <Link href="/" passHref> {/* Wrap the logo container with Link */}
               <div className={styles.logoContainer} onClick={closeAll}>
                 <Image
-                  src="/roundedLogo.png"
+                  src="/horse.png"
                   alt="CheyneDapp Logo"
                   height={48}
                   width={48}
                 />
                 <Image
-                  src="/logofox2.gif"
+                  src="/headerlogo.png"
                   alt="CheyneDapp Logo"
                   height={40}
                   width={290}
@@ -58,11 +58,6 @@ const Header: React.FC<HeaderProps> = () => {
         <div onClick={closeAll}>
           <Link href="/Tokens" passHref>
             <div className={styles.navLink}>Tokens</div>
-          </Link>
-        </div>
-        <div onClick={closeAll}>
-          <Link href="/Staking" passHref>
-            <div className={styles.navLink}>Staking</div>
           </Link>
         </div>
       </div>

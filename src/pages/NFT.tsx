@@ -7,7 +7,7 @@ import mainPagesStyles from "@/styles/Nft.module.css";
 import ContractABI from "@/components/ContractABI";
 import { useState } from "react";
 
-const CONTRACT_ADDRESS = '0x42142d58a5a4d7fAc22Fd2D3b5DBf46B04D5d16e';
+const CONTRACT_ADDRESS = '0x162f5DF9FeFB4382Fb9DC9772A37E42565072f99';
 const getExplorerLink = () => `https://bscscan.com/token/${CONTRACT_ADDRESS}`;
 const getOpenSeaURL = () => `https://opensea.io/assets/bsc/${CONTRACT_ADDRESS}`;
 const getTofuNFTURL = () => `https://opensea.io/assets/bsc/${CONTRACT_ADDRESS}`;

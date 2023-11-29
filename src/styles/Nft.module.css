@@ -1,7 +1,7 @@
 /* styles/MainPages.module.css */
 
 .mainPages {
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2757950.gif&f=1&nofb=1&ipt=bc710c35021b5522f8fab8b36f3bb24522e4edb8c95a649c1ae2d0efbef4432d&ipo=images'); /* Adjust the path based on your project structure */
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fimages%2F5d46a549a87c4d57a09b1b66c046d859%2Ftenor.gif%3Fitemid%3D9995375&f=1&nofb=1&ipt=4916121dafc1fa30d88a008d4a2afbd569eb911a412fe6873274fce4d03a37d5&ipo=images');
   background-repeat: no-repeat;
   background-position: center; /* Center the background image */
   background-size: cover; /* Adjust as needed: cover, contain, or specific dimensions */

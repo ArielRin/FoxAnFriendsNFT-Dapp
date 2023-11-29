@@ -27,6 +27,10 @@ export default function About() {
               <p>
                 This is just the beginning, and we are dedicated to providing regular updates and enhancements to our Defi Derby Dapp. Join us in shaping the future of decentralized applications with Defi Derby – where accessibility, security, and innovation converge.
               </p>
+              <br /> {/* Added line break between paragraphs */}
+              <p>
+              If you would like to have your favorite project be invited to one of our free amas, please reach out to our team.
+              </p>
             </div>
           </div>
         </div>
