@@ -1,34 +1,52 @@
 import Header from "@/components/Header";
-import ContractABI from "@/components/ContractABI";
-
 import Head from "next/head";
 import Link from "next/link";
 import styles from "@/styles/Home.module.css";
-import { useState } from "react";
-import mainPagesStyles from "@/styles/MainPages.module.css";
 import { useContractRead } from 'wagmi'
+import { writeContract } from '@wagmi/core'
+import mainPagesStyles from "@/styles/MainPages.module.css";
+import ContractABI from "@/components/ContractABI";
+import { useState } from "react";
+
+const CONTRACT_ADDRESS = '0x42142d58a5a4d7fAc22Fd2D3b5DBf46B04D5d16e';
+const getExplorerLink = () => `https://bscscan.com/token/${CONTRACT_ADDRESS}`;
+const getOpenSeaURL = () => `https://opensea.io/assets/bsc/${CONTRACT_ADDRESS}`;
+const getTofuNFTURL = () => `https://opensea.io/assets/bsc/${CONTRACT_ADDRESS}`;
 
 export default function Home() {
+  const { data: contractData, isError, isLoading } = useContractRead({
+    address: CONTRACT_ADDRESS,
+    abi: ContractABI,
+    functionName: 'name',
+  });
 
-  const closeAll = () => {
+  const { data: symbol, isError: symbolError, isLoading: symbolLoading } = useContractRead({
+    address: CONTRACT_ADDRESS,
+    abi: ContractABI,
+    functionName: 'symbol',
+  });
+
+  const { data: cost, isError: costError, isLoading: costLoading } = useContractRead({
+    address: CONTRACT_ADDRESS,
+    abi: ContractABI,
+    functionName: 'cost',
+  });
+
+  const { data: totalSupply, isError: totalSupplyError, isLoading: totalSupplyLoading } = useContractRead({
+    address: CONTRACT_ADDRESS,
+    abi: ContractABI,
+    functionName: 'totalSupply',
+  });
+
+  // Assuming Wagmi provides a function to convert from wei to ether, adjust this accordingly
+  const convertWeiToEther = (wei) => {
+    // Implementation depends on the Wagmi library, replace this with the actual conversion function
+    // Example: return wagmiConvertFunction(wei);
+    return wei;
   };
 
-
-function App() {
-  const { data, isError, isLoading } = useContractRead({
-    address: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
- 	 abi: ContractABI,
-    functionName: 'namw',
-  })
-}
-
-// function App() {
-//  const { data, isLoading, isSuccess, write } = useContractWrite({
-// 	 address: '0xecb504d39723b0be0e3a9aa33d646642d1051ee1',
-// 	 abi: ContractABI,
-// 	 functionName: 'claim',
-//  })
-// }
+  // Convert cost from wei to ether
+  const costInEther = cost ? convertWeiToEther(cost) : null;
 
   return (
     <>
@@ -39,24 +57,17 @@ function App() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header
-      />
+      <Header />
 
       <main className={`${styles.main} ${mainPagesStyles.mainPages}`}>
-        <div className={`${styles.wrapper} ${mainPagesStyles.wrapper}`}>
-
-
+        <div className={mainPagesStyles.centeredButton}>
+          <Link href="/About">
+            <div>
+              <button className={mainPagesStyles.enterAppButton}>Enter App</button>
+            </div>
+          </Link>
         </div>
-
-							<div className={mainPagesStyles.centeredButton}>
-				  <Link href="/About">
-				    <div>
-				      <button className={mainPagesStyles.enterAppButton}>Enter App</button>
-				    </div>
-				  </Link>
-				</div>
       </main>
-
     </>
   );
 }

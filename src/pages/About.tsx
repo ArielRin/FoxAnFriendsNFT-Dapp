@@ -5,29 +5,28 @@ import styles from "@/styles/Home.module.css";
 import mainPagesStyles from "@/styles/MainPages.module.css";
 import { useState } from "react";
 
-
 export default function About() {
-
-  const closeAll = () => {
-  };
-
+  const closeAll = () => {};
 
   return (
-
     <>
       <Head>
-        <title>About | CheyneDapp1223 | Next Wagmi Ethers Web3 an more</title>
+        <title>About | DeFi Derby | Lastman Team </title>
       </Head>
-      <Header
-     />
+      <Header />
 
       <main className={`${styles.main} ${mainPagesStyles.mainPages}`}>
         <div className={`${styles.wrapper} ${mainPagesStyles.wrapper}`}>
-
           <div className={styles.container}>
-            <h1>About Us</h1>
+            <h1> DeFi Derby Updates </h1>
             <div className={styles.content}>
-              <p>Welcome to Foxs Friends Dapp, your go-to decentralized application designed with inclusivity in mind. Our platform proudly offers robust support for a wide range of wallets, ensuring accessibility for users across the crypto landscape. With a commitment to innovation, Foxs Friends Dapp takes a leap forward by incorporating multichain compatibility, allowing users to seamlessly engage with various blockchain networks. Rooted in the secure and reliable foundation of WalletConnect v3, our Dapp is built to provide a seamless and user-friendly experience. We understand the importance of adaptability, and thats why Foxs Friends Dapp is positioned as a foundational solution, ensuring a smooth ride into 2024 without any concerns for users utilizing non-supported wallets. Join us in shaping the future of decentralized applications with Foxs Friends Dapp – where accessibility, security, and innovation converge.</p>
+              <p>
+                We are excited to announce a groundbreaking shift in the dynamics of our beloved Defi Derby races. While we continue to host our regular Defi Derby events with additional racehorses purchased from our Defi Derby Dapp, we are introducing enter-to-win races. Winners will not only enjoy their share of the prize pot but also have the chance to receive exclusive NFT giveaways funded directly from the race takings. All proceeds from these races will be reinvested into the entrants, reducing our weekly costs for giveaways.
+              </p>
+              <br /> {/* Added line break between paragraphs */}
+              <p>
+                This is just the beginning, and we are dedicated to providing regular updates and enhancements to our Defi Derby Dapp. Join us in shaping the future of decentralized applications with Defi Derby – where accessibility, security, and innovation converge.
+              </p>
             </div>
           </div>
         </div>

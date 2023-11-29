@@ -1,0 +1,53 @@
+/* styles/MainPages.module.css */
+
+.mainPages {
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2757950.gif&f=1&nofb=1&ipt=bc710c35021b5522f8fab8b36f3bb24522e4edb8c95a649c1ae2d0efbef4432d&ipo=images'); /* Adjust the path based on your project structure */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the background image */
+  background-size: cover; /* Adjust as needed: cover, contain, or specific dimensions */
+  min-height: 100vh; /* Set to at least the height of the viewport */
+  display: grid;
+  place-items: center;
+}
+
+.wrapper {
+  position: relative;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--rounded-md);
+  background: rgba(0, 0, 0, 0.7);
+  max-width: clamp(20rem, 90%, 40rem);
+  box-shadow: var(--shadow-lg);
+  animation: animateGlow 5s linear infinite;
+}
+
+/* Add more styles as needed */
+.wrapper::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  filter: blur(100px);
+  background: linear-gradient(95deg, #7baff3, #3f8ef6, #0b2c56, #4e70d0);
+  background-size: 200% 200%;
+  animation: animateGlow 5s linear infinite;
+}
+.enterAppButton {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  padding: 15px 32px; /* Padding inside the button */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth transition on hover */
+}
+
+.enterAppButton:hover {
+  background-color: #45a049; /* Darker green color on hover */
+}
