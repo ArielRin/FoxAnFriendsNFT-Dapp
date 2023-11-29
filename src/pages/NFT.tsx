@@ -51,7 +51,7 @@ export default function Home() {
         <meta name="twitter:site" content="@lastm3042" />
         <meta name="twitter:title" content="Defi Derby - #1 Raceday AMA on BSC" />
         <meta name="twitter:description" content="Explore the thrilling world of Defi Derby, the number 1 raceday AMA on BSC. Join the revolution in decentralized finance and experience a new era of racing and community engagement. #DefiDerby #BSC #DeFi" />
-        <meta name="twitter:image" content="https://monumental-donut-cd05a8.netlify.app/twitter.jpg" /> {/* Add the path to your image or logo */}
+        <meta name="twitter:image" content="https://monumental-donut-cd05a8.netlify.app/twitter.png" /> {/* Add the path to your image or logo */}
         <meta name="twitter:image:alt" content="Defi Derby Logo" />
       </Head>
 
