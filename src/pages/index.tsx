@@ -38,15 +38,6 @@ export default function Home() {
     functionName: 'totalSupply',
   });
 
-  // Assuming Wagmi provides a function to convert from wei to ether, adjust this accordingly
-  const convertWeiToEther = (wei) => {
-    // Implementation depends on the Wagmi library, replace this with the actual conversion function
-    // Example: return wagmiConvertFunction(wei);
-    return wei;
-  };
-
-  // Convert cost from wei to ether
-  const costInEther = cost ? convertWeiToEther(cost) : null;
 
   return (
     <>
